@@ -27,7 +27,11 @@ link_directories(${CMAKE_INSTALL_LIBDIR})
 add_library(Property STATIC IMPORTED)
 set_target_properties(Property PROPERTIES IMPORTED_LOCATION ${CMAKE_INSTALL_LIBDIR}/libProperty.a)
 
-set ( PROJECT_LINK_LIBS ${PROJECT_LINK_LIBS} libLogger.a )
+add_library(Version STATIC IMPORTED)
+set_target_properties(Version PROPERTIES IMPORTED_LOCATION ${CMAKE_INSTALL_LIBDIR}/libVersion.a)
+
+
+set ( PROJECT_LINK_LIBS ${PROJECT_LINK_LIBS} libProperty.a libVersion.a)
 
 target_link_libraries(${PROJECT_NAME} LINK_PUBLIC ${PROJECT_LINK_LIBS})
 

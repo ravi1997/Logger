@@ -18,7 +18,7 @@ set(VALID_BUILD_TYPES "Release" "Debug" "MinSizeRel" "RelWithDebInfo")
 
 option(BUILD_SHARED_LIBS "True when building a shared library" True)
 
-project(Logger VERSION 1.0.1)
+project(Enumeration VERSION 1.0.1)
 
 add_compile_options(-Wall -Wextra -std=c++2a )
 

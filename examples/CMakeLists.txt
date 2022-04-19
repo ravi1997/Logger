@@ -1,6 +1,6 @@
 include_directories(${CMAKE_INSTALL_INCLUDEDIR})
-set ( PROJECT_LINK_LIBS libLogger.a )
-link_directories(${CMAKE_INSTALL_LIBDIR})
+set ( PROJECT_LINK_LIBS libEnumeration.a )
+link_directories(${CMAKE_CURRENT_SOURCE_DIR}/lib)
 
 
 add_executable("Example" "Main.cpp")
